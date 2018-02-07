@@ -52,13 +52,17 @@ a {
     color: #6799ff;
 }
 
-.hide {
-    display: none;
-}
-
 .content-desktop {
     display: none;
 }
 
+.link-item {
+    margin-top: 15px;
+}
+
+.sub-link {
+    text-transform: none;
+    color: black;
+}
 
 /* Add your CSS here */

@@ -27,30 +27,32 @@
     <!-- Main menu -->
     <nav>
       <ul id="sub-heading" style="display: none">
-        <li class="sub-header" onClick=showCoursesLinks(this)>
-          <a href="#" class="sub-header-link">
-            Courses
-          </a>
+        <li class="sub-header">
+          <div onClick=showCoursesLinks(this)>
+            <a href="#" class="sub-header-link">
+              Courses
+            </a>
+          </div>
           <nav>
             <ul id="courses-links" style="display: none">
-              <li>
-                <a href="#">
+              <li class="link-item">
+                <a href="#" class="sub-link">
                 <div class="content-desktop">
                   <img src="http://tf-assets-prod.s3.amazonaws.com/wow-next/course-icons/career.gz.svg" alt="Web Development Bootcamp"/>
                 </div>
                   Web Development Bootcamp
                 </a>
               </li>
-              <li>
-                <a href="#">
+              <li class="link-item">
+                <a href="#" class="sub-link">
                 <div class="content-desktop">
                   <img src="http://tf-assets-prod.s3.amazonaws.com/splash/data-science/data_science.svg" alt="Data Science"/>
                 </div>
                   Data Science Bootcamp
                 </a>
               </li>
-              <li>
-                <a href="#">
+              <li class="link-item">
+                <a href="#" class="sub-link">
                 <div class="content-desktop">
                   <img src="http://tf-assets-prod.s3.amazonaws.com/wow-next/splash-nav/master-a-new-skill.gz.svg" alt="All courses"/>
                 </div>
@@ -60,46 +62,49 @@
             </ul>
           </nav>
         </li>
-        <li class="sub-header" onClick=showHowItWorksLinks(this)>
-          <a href="#" class="sub-header-link">
-            How it works
-          </a>
+        <li class="sub-header">
+          <div onClick=showHowItWorksLinks(this)>
+            <a href="#" class="sub-header-link">
+              How it works
+            </a>
+          </div>
           <nav>
-            <ul id="how-it-works-links" style="display: none">
-              <li>
-                <a href="#">
-                <div class="content-desktop">
-                  <img src="http://tf-assets-prod.s3.amazonaws.com/splash/nav-icons/mentorship.gz.svg" alt="1-on-1 mentorship"/>
-                </div>
-                  1-on-1 mentorship
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                <div class="content-desktop">
-                  <img src="http://tf-assets-prod.s3.amazonaws.com/splash/nav-icons/career-services.gz.svg" alt="Career prep"/>
-                </div>
-                  Career prep
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                <div class="content-desktop">
-                  <img src="http://tf-assets-prod.s3.amazonaws.com/splash/nav-icons/guarantee.gz.svg" alt="Job guarantee"/>
-                </div>
-                  Web Development job guarantee
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                <div class="content-desktop">
-                  <img src="http://tf-assets-prod.s3.amazonaws.com/splash/nav-icons/jobs-report.gz.svg" alt="Student outcomes"/>
-                </div>
-                  Student outcomes
-                </a>
-              </li>
-            </ul>
+              <ul id="how-it-works-links" style="display: none">
+                <li class="link-item">
+                  <a href="#" class="sub-link">
+                  <div class="content-desktop">
+                    <img src="http://tf-assets-prod.s3.amazonaws.com/splash/nav-icons/mentorship.gz.svg" alt="1-on-1 mentorship"/>
+                  </div>
+                    1-on-1 mentorship
+                  </a>
+                </li>
+                <li class="link-item">
+                  <a href="#" class="sub-link">
+                  <div class="content-desktop">
+                    <img src="http://tf-assets-prod.s3.amazonaws.com/splash/nav-icons/career-services.gz.svg" alt="Career prep"/>
+                  </div>
+                    Career prep
+                  </a>
+                </li>
+                <li class="link-item">
+                  <a href="#" class="sub-link">
+                  <div class="content-desktop">
+                    <img src="http://tf-assets-prod.s3.amazonaws.com/splash/nav-icons/guarantee.gz.svg" alt="Job guarantee"/>
+                  </div>
+                    Web Development job guarantee
+                  </a>
+                </li>
+                <li class="link-item">
+                  <a href="#" class="sub-link">
+                  <div class="content-desktop">
+                    <img src="http://tf-assets-prod.s3.amazonaws.com/splash/nav-icons/jobs-report.gz.svg" alt="Student outcomes"/>
+                  </div>
+                    Student outcomes
+                  </a>
+                </li>
+              </ul>
           </nav>
+          </div>
         </li>
         <li class="sub-header">
           <a href="#" class="sub-header-link">
@@ -127,16 +132,20 @@
       else { subHeading.style.display = "none"; } 
     };
     function showCoursesLinks() { 
-      const subHeading = document.getElementById("courses-links"); 
-      if (subHeading.style.display === "none") 
-        { subHeading.style.display = "block"; } 
-      else { subHeading.style.display = "none"; } 
+      const courses = document.getElementById("courses-links");
+      const howItWorks = document.getElementById("how-it-works-links"); 
+      howItWorks.style.display = "none";
+      if (courses.style.display === "none") 
+        { courses.style.display = "block"; } 
+      else { courses.style.display = "none"; } 
     };
     function showHowItWorksLinks() { 
-      const subHeading = document.getElementById("how-it-works-links"); 
-      if (subHeading.style.display === "none") 
-        { subHeading.style.display = "block"; } 
-      else { subHeading.style.display = "none"; } 
+      const howItWorks = document.getElementById("how-it-works-links");
+      const courses = document.getElementById("courses-links"); 
+      courses.style.display = "none";
+      if (howItWorks.style.display === "none") 
+        { howItWorks.style.display = "block"; } 
+      else { howItWorks.style.display = "none"; } 
     };
   </script>
 </html>
