@@ -27,7 +27,7 @@
     <!-- Main menu -->
     <nav>
       <ul id="sub-heading" style="display: none">
-        <li class="sub-header">
+        <li class="sub-header" onClick=showCoursesLinks(this)>
           <a href="#" class="sub-header-link">
             Courses
           </a>
@@ -35,7 +35,9 @@
             <ul id="courses-links" style="display: none">
               <li>
                 <a href="#">
-                  <img src="http://tf-assets-prod.s3.amazonaws.com/wow-next/course-icons/career.gz.svg" alt="Web Development Bootcamp">
+                <div id="content-desktop">
+                  <img src="http://tf-assets-prod.s3.amazonaws.com/wow-next/course-icons/career.gz.svg" alt="Web Development Bootcamp"/>
+                </div>
                   Web Development Bootcamp
                 </a>
               </li>
