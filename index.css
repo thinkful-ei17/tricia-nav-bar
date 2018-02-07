@@ -74,9 +74,18 @@
     }
     
     @media screen and (min-width: 768px) {
+        .nav-options {
+            display: flex;
+            flex-basis: 500px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
         .content-desktop {
             display: block;
+            text-transform: uppercase;
         }
+
         #courses-links,
         #how-it-works-links {
             display: flex;
@@ -84,12 +93,30 @@
             justify-content: space-around;
             flex-direction: row;
         }
+
         .link-item {
             width: 125px;
             text-align: center;
         }
+
+        .desktop {
+            display: block;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        .container {
+            flex-direction: row;
+        }
+
         .hidden {
             display: none !important;
+        }
+        
+        .sub-header {
+            border: none;
         }
     }
     /* Add your CSS here */
