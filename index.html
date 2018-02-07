@@ -31,8 +31,8 @@
           <a href="#" class="sub-header-link">
             Courses
           </a>
-          <nav class="hide">
-            <ul>
+          <nav>
+            <ul id="courses-links" style="display: none">
               <li>
                 <a href="#">
                   <img src="http://tf-assets-prod.s3.amazonaws.com/wow-next/course-icons/career.gz.svg" alt="Web Development Bootcamp">
@@ -58,8 +58,8 @@
           <a href="#" class="sub-header-link">
             How it works
           </a>
-          <nav class="hide">
-            <ul>
+          <nav>
+            <ul id="how-it-works-links" style="display: none">
               <li>
                 <a href="#">
                   <img src="http://tf-assets-prod.s3.amazonaws.com/splash/nav-icons/mentorship.gz.svg" alt="1-on-1 mentorship">
@@ -111,6 +111,18 @@
       if (subHeading.style.display === "none") 
         { subHeading.style.display = "block"; } 
       else { subHeading.style.display = "none"; } 
-    } 
+    };
+    function showCoursesLinks() { 
+      const subHeading = document.getElementById("courses-links"); 
+      if (subHeading.style.display === "none") 
+        { subHeading.style.display = "block"; } 
+      else { subHeading.style.display = "none"; } 
+    };
+    function showHowItWorksLinks() { 
+      const subHeading = document.getElementById("how-it-works-links"); 
+      if (subHeading.style.display === "none") 
+        { subHeading.style.display = "block"; } 
+      else { subHeading.style.display = "none"; } 
+    };
   </script>
 </html>
